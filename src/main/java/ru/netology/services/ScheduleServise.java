@@ -1,4 +1,5 @@
 package ru.netology.services;
+
 public class ScheduleServise {
     public int calculate(int income, int expenses, int threhold) {
         int count = 0; // счётчик месяцев отдыха
@@ -6,9 +7,9 @@ public class ScheduleServise {
         for (int month = 0; month < 12; month++) {
             if (money >= threhold) { // можем ли отдыхать?
                 count++; // увеличиваем счётчик месяцев отдыха
-                money = (money - expenses)/3;
+                money = (money - expenses) / 3;
             } else {
-                money = money + income-expenses;
+                money = money + income - expenses;
             }
         }
         return count;
